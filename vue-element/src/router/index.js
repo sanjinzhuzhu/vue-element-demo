@@ -11,7 +11,6 @@ import componentsRouter from './modules/components'
 import chartsRouter from './modules/charts'
 import tableRouter from './modules/table'
 import nestedRouter from './modules/nested'
-
 /**
  * Note: sub-menu only appear when route children.length >= 1
  * Detail see: https://panjiachen.github.io/vue-element-admin-site/guide/essentials/router-and-nav.html
@@ -85,17 +84,19 @@ export const constantRoutes = [
   },
   // 个人增加部分
   {
-    path: '/my-workorder',
+    path: '/my-learning',
     component: Layout,
     children: [
       {
         path: 'index',
-        component: () => import('@/views/my-workorder/index'),
-        name: 'my-workorder',
-        meta: { title: 'MyWorkorder', icon: 'dashboard', affix: true }
+        component: () => import('@/views/my-learning/index'),
+        name: 'my-learning',
+        meta: { title: 'MyLearning', icon: 'dashboard', affix: true }
       }
+
     ]
   },
+
   {
     path: '/documentation',
     component: Layout,
