@@ -7,6 +7,7 @@
     <el-tabs type="border-card">
       <el-tab-pane label="Icons">
         <div class="grid">
+          <!-- 开始写 svgIcons 功能 -->
           <div v-for="item of svgIcons" :key="item" @click="handleClipboard(generateIconCode(item),$event)">
             <el-tooltip placement="top">
               <div slot="content">
@@ -40,7 +41,7 @@
 </template>
 
 <script>
-import clipboard from '@/utils/clipboard'
+import clipboard from '@/utils/clipboard'// 安装的依赖  "clipboard": "2.0.4",
 import svgIcons from './svg-icons'
 import elementIcons from './element-icons'
 
@@ -74,7 +75,7 @@ export default {
   .grid {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
   }
 
   .icon-item {

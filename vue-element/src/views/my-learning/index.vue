@@ -63,25 +63,25 @@ export default {
           url: 'MyDashboard/MyDashboard'
         },
         {
-          label: 'HTML',
+          label: 'XXX',
           children: [
             {
               path: '/基础知识',
               name: '基础知识',
               label: '基础知识',
-              url: 'MHTML/基础知识'
+              url: '/基础知识'
             },
             {
               path: '/面试题目',
               name: '面试题目',
               label: '面试题目',
-              url: 'MHTML/面试题目'
+              url: '/面试题目'
             },
             {
               path: '/思维导图',
               name: '思维导图',
               label: '思维导图',
-              url: 'MHTML/思维导图'
+              url: '/思维导图'
             }
           ]
         }
