@@ -10,19 +10,19 @@ const MyLearningRouter = {
   children: [
     {
       path: 'MyDashboard',
-      component: () => import('@/views/my-learning/learning-views/MyDashboard'),
+      component: () => import('@/views/my-learning/MyDashboard'),
       name: 'MyDashboard',
       meta: { title: 'MyDashboard' }
     },
     {
       path: 'HTML',
-      component: () => import('@/views/my-learning/learning-views/HTML'),
+      component: () => import('@/views/my-learning/HTML'),
       name: 'HTML',
       meta: { title: 'HTML' }
     },
     {
       path: 'FreeList',
-      component: () => import('@/views/my-learning/learning-views/FreeList'),
+      component: () => import('@/views/my-learning/FreeList'),
       name: 'FreeList',
       meta: { title: 'FreeList' }
     }
