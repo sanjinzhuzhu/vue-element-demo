@@ -15,10 +15,10 @@ const MyLearningRouter = {
       meta: { title: 'MyDashboard' }
     },
     {
-      path: 'HTML',
-      component: () => import('@/views/my-learning/HTML'),
-      name: 'HTML',
-      meta: { title: 'HTML' }
+      path: 'CourseM',
+      component: () => import('@/views/my-learning/CourseM'),
+      name: 'CourseM',
+      meta: { title: 'CourseM' }
     },
     {
       path: 'FreeList',
