@@ -1,28 +1,41 @@
 <template>
   <div>
     <el-button type="primary" icon="el-icon-plus" style="margin:20px" />
+    <el-table :data="tableData" style="width: 100%">
+      <el-table-column prop="no" width="50px" label="序号" />
+      <el-table-column prop="type" label="课程类型" />
+      <el-table-column prop="name" label="姓名" />
+      <el-table-column prop="age" label="年龄" />
+      <el-table-column prop="icon" label="图标" />
+      <el-table-column prop="edit" label="编辑" />
 
-    <el-table :data="tableData" border="true" style="width:100%">
-      <el-table-column prop="prop" label="序号" width="80px" align="center" />
-      <el-table-column prop="name" label="课程类型" width="width" />
-      <el-table-column prop="address" label="图标" width="width" />
-      <el-table-column prop="address" label="操作" width="width" />
     </el-table>
-
-    <el-pagination
+    <!-- <el-pagination
       style="textAlign:center"
       layout="prev, pager, next,jumper,sizes,total"
-      :total="99"
-      :current-page="5"
-      :page-size="5"
-      :pager-count="7"
-      :page-sizes="[3,5,10]"
-    />
+    /> -->
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
+  data() {
+    return {
+      tableData: []
+    }
+  },
+  mounted() {
+    this.getTableData()
+  },
+  methods: {
+    getTableData() {
+      axios.get('/course-data').then(({ data }) => {
+        this.tableData = data
+      })
+    }
+  }
 
 }
 </script>
@@ -30,3 +43,4 @@ export default {
 <style scoped>
 
 </style>
+

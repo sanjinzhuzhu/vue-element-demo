@@ -1,19 +1,20 @@
 <template>
+
   <div>
-    <Card />
+    顶部显示card
+    <Detail />
   </div>
 </template>
-
 <script>
-import Card from './Card'
+import Detail from './Detail'
 export default {
   name: '',
   components: {
-    Card
+    Detail
   }
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
