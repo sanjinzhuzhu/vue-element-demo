@@ -35,12 +35,6 @@ module.exports = {
     overlay: {
       warnings: false,
       errors: true
-    },
-    before: require('./mock/mock-server.js'),
-    proxy: {
-      '/course-data': {
-        target: 'http://localhost:3000'
-      }
     }
 
   },
